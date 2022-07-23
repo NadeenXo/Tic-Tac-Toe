@@ -1,5 +1,6 @@
 let turn = 'x';
 let title = document.querySelector('.title');
+
 let squares =  [];
 /*
 let squares = Array.from( document.getElementsByClassName('square'));
@@ -11,17 +12,31 @@ squares.map(square => {
 */
 function newGame(x,y,z){
     title.innerHTML = `${squares[x]} is the winner`
+
         document.getElementById('item'+x).style.backgroundColor ='black';
         document.getElementById('item'+y).style.backgroundColor ='black';
         document.getElementById('item'+z).style.backgroundColor ='black';
+
         setInterval(() => {
             title.innerHTML += '.'
+            
         }, 1000);
         //new game
         setTimeout(() => {
             location.reload();
+ 
         }, 3000);
 }
+
+function handle (){
+    setInterval(() => {
+        title.innerHTML = 'New Game ..';
+    }, 1000);
+    setTimeout(() => {
+        location.reload();
+    }, 1000);
+}
+
 function winner(){
     for(let i=1;i<10;i++){
         squares[i]=document.getElementById('item'+i).innerHTML;
@@ -74,6 +89,12 @@ function winner(){
         newGame(3,5,7);
 
     }
+    /*
+    else if (squares[1]!=''&&squares[2]!=''&&squares[3]!=''&&squares[4]!=''&&squares[5]!=''&&squares[6]!=''&&squares[7]!=''&&squares[8]!=''&&squares[9]!=''){
+        handle();
+    }
+    */
+
 
 
 }

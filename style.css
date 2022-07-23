@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .game{
     max-width: 400px;
     text-align: center;
@@ -32,3 +35,16 @@ span{
     color: orangered;
     cursor: pointer;
 }
+.new{
+    color: black;
+    width: 100px;
+    line-height: 30px;
+    background-color: orangered;
+    margin: 5px auto;
+}
+.new:hover{
+    background-color: yellow;
+    cursor: pointer;
+    
+}
+
